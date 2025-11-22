@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kumar Manglam – Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo">Kumar Manglam</h1>
+        <nav class="main-nav">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/about}">About</a>
+            <a th:href="@{/projects}">Projects</a>
+            <a th:href="@{/contact}">Contact</a>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <section class="hero">
+        <img th:src="@{/images/profile.jpg}" alt="Kumar Manglam" class="hero-photo">
+        <div class="hero-text">
+            <h2>Hi – I'm Kumar Manglam</h2>
+            <p>Computer Science student & aspiring SDE. I build clean, responsive web apps using Java and modern web technologies.</p>
+            <p><strong>Skills:</strong> Java, Spring Boot, Thymeleaf, HTML/CSS, JavaScript, SQL</p>
+        </div>
+    </section>
+    <section class="featured">
+        <h3>Featured Projects</h3>
+        <div class="cards">
+            <div class="card">
+                <h4>Project One</h4>
+                <p>Short description of project 1. Add a link to GitHub or live demo.</p>
+            </div>
+            <div class="card">
+                <h4>Project Two</h4>
+                <p>Short description of project 2. Add technologies used and role.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Kumar Manglam</p>
+    </div>
+</footer>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

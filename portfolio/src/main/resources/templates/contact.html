@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Kumar Manglam</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo">Kumar Manglam</h1>
+        <nav class="main-nav">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/about}">About</a>
+            <a th:href="@{/projects}">Projects</a>
+            <a th:href="@{/contact}">Contact</a>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <section>
+        <h2>Contact Me</h2>
+        <p>Let's connect! Fill out the form below or email me at <a href="mailto:youremail@example.com">thakurmanglam7771@gmail.com</a></p>
+
+        <!-- Show status message if exists -->
+        <div th:if="${status}" class="status" th:text="${status}"></div>
+
+        <form th:action="@{/sendMessage}" method="post" th:object="${messageForm}" class="contact-form">
+            <label>Name:</label>
+            <input type="text" th:field="*{name}" required />
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" required />
+            <label>Message:</label>
+            <textarea th:field="*{message}" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Kumar Manglam</p>
+    </div>
+</footer>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
